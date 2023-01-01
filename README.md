@@ -1,1 +1,1 @@
-# Financial-Discord-Bot
+## Financial-Discord-Bot

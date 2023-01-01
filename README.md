@@ -1,1 +1,3 @@
-## Financial-Discord-Bot
+# Financial-Discord-Bot
+
+## Getting Started

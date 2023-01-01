@@ -46,7 +46,7 @@ Please contact me on Twitter [@haant05](https://twitter.com/haant05) or LinkedIn
 
 Many thanks for checking out my project!
 
-- Denas
+-- Denas
 
 ## Acknowledgments
 

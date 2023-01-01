@@ -35,7 +35,7 @@ Please refer below for the GitHub pages of the above libraries. They can all be 
   7. Direct to OAuth2 > URL Generator. 
   8. Select "bot" scope and generate link. 
   9. Press onto link and invite bot onto your desired server. 
-  10. Lastly, run the code. 
+ 10. Lastly, run the code. 
 
 ## Contact
 

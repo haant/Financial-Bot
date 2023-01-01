@@ -8,10 +8,13 @@ Some of its features are currenlty limited, as this project is ongoing. A second
 
 Below, are some of the functionailities of the project, as well as en example to show you how it works:
 - Displays the value of an inputted stock
+
 ![Stock Price](https://github.com/haant/Financial-Discord-Bot/blob/main/images/StockPrice.png)
 - Displays information for an inputted stock
+
 ![Stock Info](https://github.com/haant/Financial-Discord-Bot/blob/main/images/StockInfo.png)
 - Currency exchnage for USD-EUR, EUR-USD, USD-GBP, GBP-USD, GBP-JPY, JPY-GBP
+
 ![Currency Convcerter](https://github.com/haant/Financial-Discord-Bot/blob/main/images/CurrencyConverter.png)
 
 ## Getting Started

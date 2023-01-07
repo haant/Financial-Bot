@@ -20,11 +20,11 @@ Below, are some of the functionalities of the project, as well as en example to 
 ![Currency Convcerter](https://github.com/haant/Financial-Discord-Bot/blob/main/images/CurrencyConverter.png)
 
 - Creates a graph from inputted stock
-- 
+
 ![Stock Graph](https://github.com/haant/Financial-Discord-Bot/blob/main/images/StockGraph.png)
 
 - Displays the top 10 richest people based on the Bloomberg Index
-- 
+
 ![Display Richest People](https://github.com/haant/Financial-Discord-Bot/blob/main/images/RichestPeople.png)
 
 ## Getting Started

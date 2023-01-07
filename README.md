@@ -10,17 +10,21 @@ Below, are some of the functionalities of the project, as well as en example to 
 - Displays the value of an inputted stock
 
 ![Stock Price](https://github.com/haant/Financial-Discord-Bot/blob/main/images/StockPrice.png)
+
 - Displays information for an inputted stock
 
 ![Stock Info](https://github.com/haant/Financial-Discord-Bot/blob/main/images/StockInfo.png)
+
 - Currency exchnage for USD-EUR, EUR-USD, USD-GBP, GBP-USD, GBP-JPY, JPY-GBP
 
 ![Currency Convcerter](https://github.com/haant/Financial-Discord-Bot/blob/main/images/CurrencyConverter.png)
 
 - Creates a graph from inputted stock
+- 
 ![Stock Graph](https://github.com/haant/Financial-Discord-Bot/blob/main/images/StockGraph.png)
 
 - Displays the top 10 richest people based on the Bloomberg Index
+- 
 ![Display Richest People](https://github.com/haant/Financial-Discord-Bot/blob/main/images/RichestPeople.png)
 
 ## Getting Started

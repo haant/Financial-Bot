@@ -1,6 +1,8 @@
 import hikari
 import lightbulb
+import pandas as pd
 import yfinance as yf
+import matplotlib.pyplot as plt
 from currency_converter import CurrencyConverter
 
 # BOT
@@ -39,7 +41,7 @@ async def stockInfo(ctx):
     findStock = yf.Ticker(inputtedStock) # Uses library to find stock
     stockName = findStock.info['longName'] # Takes stock name
     stockPrice = round(findStock.info['regularMarketPrice'], 2) # Takes stock price, roudnds to 2 D.P
-    stockSummary = findStock.info['longBusinessSummary'] # # Takes stock summary 
+    stockSummary = findStock.info['longBusinessSummary'] # Takes stock summary 
     stockCity = findStock.info['city'] # Takes stock city 
     stockState = findStock.info['state'] # Takes stock state
     stockCountry = findStock.info['country'] # Takes stock country
@@ -120,5 +122,42 @@ async def convertCurrencyJPYGBP(ctx):
     converted = round(convert.convert(inputtedAmount, 'JPY', 'GBP'), 2)
     output = str(inputtedAmount) + " JPY is " + str(converted) + " GBP "
     await ctx.respond(output)
+
+# Generates graph using user input
+@bot.command
+@lightbulb.option('enddate', 'End date') # Takes user input of end date
+@lightbulb.option('begindate', 'Begin date') # Takes user input of begin date
+@lightbulb.option('stockname', 'Enter stockname') # Takes user input of stock name
+@lightbulb.command('stockgraph', 'Displays graph based on entered stock', auto_defer=True) # Defers command to allow to display image
+@lightbulb.implements(lightbulb.SlashCommand) # Uses the slash command feature
+async def stockGraph(ctx):
+    stockName = ctx.options.stockname
+    dateBegin = ctx.options.begindate
+    dateEnd = ctx.options.enddate
+    findStock = yf.Ticker(stockName) # Finds stock
+    stockFullName = findStock.info['longName'] # Takes stock long name
+    data = yf.download(stockName, start=dateBegin, end=dateEnd) # Downloads data for graph
+    y = data['Close']
+    fig = plt.figure(figsize=(20,10)) # Sets plot size 
+    plt.plot(y)
+    plt.title(stockFullName) # Plot title
+    plt.ylabel('Closing Price') # Plot y label
+    plt.xlabel('Year') # Plot x label
+    plt.xticks(rotation=45) # Rotates x label
+    plt.savefig(f'{stockName}, {dateBegin}, {dateEnd}.png') # Saves graph as png
+    image = hikari.File(f'/Users/Denas Zelvys/Desktop/python projects/Finance Discord Bot V2/{stockName}, {dateBegin}, {dateEnd}.png') # Displays graph
+    await ctx.respond(image)
+
+# Displays top 10 richest people
+@bot.command
+@lightbulb.command('richestpeople', 'Displays top 10 richest people') # Allows user to select command
+@lightbulb.implements(lightbulb.SlashCommand) # Uses the slash command feature
+async def richestPeople(ctx):
+    url = "https://en.wikipedia.org/wiki/Bloomberg_Billionaires_Index" # Loads URL for dataframe web scrape
+    tables = pd.read_html(url)[2] # Selects second table from web scrape
+    df = tables.drop(["Source(s) of wealth", "Nationality", "Age"], axis=1) # Hides 3 columns from data frame
+    df = df.set_index("No.") # Sets "No." column as index
+    await ctx.respond(df)
+
 
 bot.run() # Runs bot

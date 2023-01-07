@@ -4,7 +4,7 @@
 
 This is a Discord Bot used for various financial interpretation. It currenlty houses a couple of different features, including the ability to display an up-to-date price of a chosen stock, as well as convert currencey to the most recent exchange rate given. 
 
-Some of its features are currenlty limited as this project is an ongoing project. A second verision is currently in development and should be released later this year. 
+Some of its features are currenlty limited as this project is an ongoing project in development. New features will be added from time to time!
 
 Below, are some of the functionalities of the project, as well as en example to show you how it works:
 - Displays the value of an inputted stock
@@ -17,13 +17,21 @@ Below, are some of the functionalities of the project, as well as en example to 
 
 ![Currency Convcerter](https://github.com/haant/Financial-Discord-Bot/blob/main/images/CurrencyConverter.png)
 
+- Creates a graph from inputted stock
+![Stock Graph](https://github.com/haant/Financial-Discord-Bot/blob/main/images/StockGraph.png)
+
+- Displays the top 10 richest people based on the Bloomberg Index
+![Display Richest People](https://github.com/haant/Financial-Discord-Bot/blob/main/images/RichestPeople.png)
+
 ## Getting Started
 
 Please make sure you have the following libraries pre-installed:
 ```
-hikari 
+hikari
+pandas
 lightbulb
 yfinance
+matplotlib
 currencyconverter 
 ```
 
@@ -56,3 +64,5 @@ All libraries in thie project are as follows:
 - [lightbulb](https://github.com/tandemdude/hikari-lightbulb)
 - [yfinance](https://github.com/ranaroussi/yfinance)
 - [currencyconverter](https://github.com/alexprengere/currencyconverter)
+- [pandas](https://github.com/pandas-dev/pandas)
+- [matplotlib](https://github.com/matplotlib/matplotlib)

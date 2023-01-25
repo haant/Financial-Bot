@@ -2,9 +2,9 @@
 
 ## About the Project
 
-This is a Discord Bot used for various financial interpretation. It currenlty houses a couple of different features, including the ability to display an up-to-date price of a chosen stock, as well as convert currencey to the most recent exchange rate given. 
+This is a Discord bot used for various financial interpretations. It currently houses a couple of different features, including the ability to display an up-to-date price of a chosen stock, as well as convert currency to the most recent exchange rate given. It uses the yfinance library to retrieve stock information, Currency_converter library to convert currency, and matplotlib library to display graphs. The token field in the code should be replaced with a generated token for the Discord bot to work. Additionally, the default_enabled_guilds field should be filled with the server ID of the Discord server where the bot will be used.
 
-Some of its features are currenlty limited as this project is an ongoing project in development. New features will be added from time to time!
+Some of its features are currently limited as this project is an ongoing project in development. New features will be added from time to time!
 
 Below, are some of the functionalities of the project, as well as en example to show you how it works:
 - Displays the value of an inputted stock
